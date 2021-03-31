@@ -1,0 +1,14 @@
+#footer
+{
+    background: #333;
+    color: #fff;
+    padding: 12px;
+}
+.fa-handshake-o
+{
+    margin: 3px;
+    color: red;
+}
+p{
+    font-size: 1.6em;
+}
