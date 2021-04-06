@@ -30,9 +30,16 @@
     font-size: 1.5em;
     text-align: justify;
 }
-.col-md-20 {
-    margin: auto;
+
+input.form-control{
+    background: #fff;
+    padding: 25px;
+    margin: 15px;
+    font-size: 1.5em;
+    text-align: justify;
+
 }
+
 .contact-info .fa
 {
     margin: 10px;
@@ -49,4 +56,7 @@ h1::after {
 }
 #contact h1{
  font-size: 3.5em;
+}
+.btn.btn-primary{
+    padding: 12px 20px;
 }
