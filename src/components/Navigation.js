@@ -1,11 +1,16 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap';
 import './navigation.css';
-import styled from "styled-components"
-const NavLink=styled.div`
-font-color:black;
+
+import styled from 'styled-components';
+import {Link, animateScroll as scroll } from "react-scroll";
+
+const NavLink=styled(Link)`
 padding-left:2em;
+color:grey;
 `;
+
+
 function Navigation() {
     return (
         <>
@@ -26,13 +31,54 @@ function Navigation() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
-                        <NavLink href="#home">HOME</NavLink>
-                        <NavLink href="#about-us">ABOUT US</NavLink>
-                        <NavLink href="#course">COURSE</NavLink>
-                        <NavLink href="#online-course">ONLINE COURSE</NavLink>
-                        <NavLink href="#faculty">FACULTY</NavLink>
-                        <NavLink href="#testimonials">TESTIMONIALS</NavLink>
-                        <NavLink href="#contact-us">CONTACT US</NavLink>
+                        <NavLink to="/">HOME</NavLink>
+                        <NavLink activeClass="active"
+                              to="about"
+                             spy={true}
+                             smooth={true}
+                              offset={-70}
+                              duration={500}>ABOUT US</NavLink>
+                        <NavLink activeClass="active"
+                                        to="courses"
+                                        spy={true}
+                                         smooth={true}
+                                         offset={-70}
+                                 duration={500}>COURSE</NavLink>
+                        <NavLink 
+                                        activeClass="active"
+                                        to="courses"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-70}
+                                        duration={500} >ONLINE COURSE
+                          </NavLink>
+                        <NavLink 
+                                            activeClass="active"
+                                            to="faculty"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            duration={500}>
+                                            FACULTY
+                        </NavLink>
+                        <NavLink 
+                                            activeClass="active"
+                                            to="testimonials"
+                                            spy={true}
+                                            smooth={true}
+                                            offset={-70}
+                                            duration={500}>
+                                                TESTIMONIALS
+                            </NavLink>
+                        <NavLink 
+                        activeClass="active"
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                        >CONTACT US
+                        </NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
